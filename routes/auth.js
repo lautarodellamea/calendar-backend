@@ -15,6 +15,9 @@ const {
   revalidarToken,
 } = require("../controllers/auth");
 
+// middleware para revalidar el token
+const { validarJWT } = require("../middlewares/validar-jwt");
+
 router.post(
   "/new",
   // middlewares
@@ -43,6 +46,6 @@ router.post(
   loginUsuario
 );
 
-router.get("/renew", revalidarToken);
+router.get("/renew", validarJWT, revalidarToken);
 
 module.exports = router;

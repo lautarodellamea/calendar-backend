@@ -1,0 +1,15 @@
+meta {
+  name: revalidar JWT
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:4000/api/auth/renew
+  body: none
+  auth: none
+}
+
+headers {
+  x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWI4MDQ0MGYzZDEyYjk1NzYyMjY4ZjYiLCJuYW1lIjoibGF1IiwiaWF0IjoxNzA2NTYzNjMwLCJleHAiOjE3MDY1NzA4MzB9.kx2jINo7eWnXLUvzV-0dCTzwdFtuRVttjpdcIzsi9fg
+}
